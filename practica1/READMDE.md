@@ -20,7 +20,12 @@ address 192.168.56.11
 netmask 255.255.255.0
 
 Guardamos y ejecutamos sudo ifup enp0s8 en nuestra terminal.
-Con la orden ifconfig podemos comprobar que todo se ha realizado correctamente
+Con la orden ifconfig podemos comprobar que todo se ha realizado correctamente.
 
 ## Acceso remoto con ssh y curl
 Tenemos nuestra Maquina1 con IP **192.168.56.101** y nuestra Maquina2 con IP **192.168.56.102** y vamos a conectarnos desde la Maquina1 a la Maquina2 por ssh. Para ello ejecutamos en la terminal ssh 192.168.56.102
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica1/Imagenes/ssh.png)
+
+Como podemos ver al conectarnos por ssh y ejecutar ls y obtenemos el el archivo de prueba que se encuentra en la Maquina2.
+También si creamos un archivo html de ejemplo (hola.html) en alguna de las dos maquinas (por ejemplo la Maquina2) dentro de la carpeta /var/www/html y ejecutamos la orden curl http://192.168.56.102/hola.html nos aparecerá el contenido del archivo.
