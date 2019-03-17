@@ -37,5 +37,5 @@ Para comprobar que esto funciona correctamente vamos a añadir otra que actualic
     
     */1 * * * * antonio rsync -avz -e ssh 192.168.56.101:/var/www/ /var/www/
     
-![imagen]()
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica2/Imagenes/crontab.png)
 
