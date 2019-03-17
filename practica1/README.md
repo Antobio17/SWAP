@@ -1,4 +1,4 @@
-# PRACTICA 1: Preparación de las herramientas
+# Práctica 1: Preparación de las herramientas
 En esta practica lo primero que haremos será instalar Ubuntu Server en dos maquinas virtuales mediante VirtualBox y conectarlas entre ellas mediante una subred.
 
 
