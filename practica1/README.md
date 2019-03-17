@@ -14,12 +14,15 @@ Ahora vamos a crear una interfaz de red en nuestras dos máquinas virtuales. Par
 Una vez hecho esto con nuestras dos máquinas podremos pasar a la edición del archivo **interfaces** de cada una.
 Arrancamos las maquinas, nos movemos al directorio donde está el archivo *cd /etc/network/* y ejecutamos **sudo nano interfaces**. Ahora añadimos las siguientes lineas al archivo:
 
-auto enp0s8
-iface enp0s8 inet static
-address 192.168.56.11
-netmask 255.255.255.0
+    auto enp0s8
+    iface enp0s8 inet static
+    address 192.168.56.11
+    netmask 255.255.255.0
 
-Guardamos y ejecutamos sudo ifup enp0s8 en nuestra terminal.
+Guardamos y ejecutamos en nuestra terminal: 
+    
+    sudo ifup enp0s8
+    
 Con la orden ifconfig podemos comprobar que todo se ha realizado correctamente.
 
 ## Acceso remoto con ssh y curl
