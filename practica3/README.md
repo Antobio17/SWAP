@@ -20,6 +20,7 @@ Ahora vamos a pasar a su configuración modificando/creando el archivo **/etc/ng
     upstream apaches {
      server 192.168.56.101;
      server 192.168.56.102;
+     keepalive 5;
     }
 
     server{
