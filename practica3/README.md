@@ -18,8 +18,8 @@ Y arrancamos el servidor:
 Ahora vamos a pasar a su configuración modificando/creando el archivo **/etc/nginx/conf.d/default.conf**. Definimos en la sección *upsctream* las maquinas que forman el cluster web y en la sección *server* indicamos que la conexión entre los servidores finales y nginX es por HTTP 1.1
 
     upstream apaches {
-     server 192.168.56.11;
-     server 192.168.56.12;
+     server 192.168.56.101;
+     server 192.168.56.102;
     }
 
     server{
