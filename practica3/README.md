@@ -15,7 +15,7 @@ Y arrancamos el servidor:
 
     sudo systemctl start nginx
     
-Ahora vamos a pasar a su configuración modificando/creando el archivo **/etc/nginx/conf.d/default.conf**. Definimos en la sección *upsctream* las maquinas que forman el cluster web y en la sección *server* indicamos que la conexión entre los servidores finales y nginX es por HTTP 1.1
+Ahora vamos a pasar a su configuración modificando/creando el archivo **/etc/nginx/conf.d/default.conf**. Definimos en la sección *upsctream* las maquinas que forman el cluster web y en la sección *server* indicamos que la conexión entre los servidores finales y nginX es por HTTP 1.1. Hay multiples opciones en el apartado upstream como weight=X para indicar a que servidor se da más prioridad, ip_hash para hacer uso de round robin, keepalive=X para mantener establecida la conexión X segundos y no crear múltiples conexiones nuevas...
 
     upstream apaches {
      server 192.168.56.101;
