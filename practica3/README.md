@@ -42,5 +42,10 @@ Ahora vamos a pasar a su configuración modificando/creando el archivo **/etc/ng
       }
     }
     
+Ahora reiniciamos el servidor y si lo hemos configurado correctamente no debería saltar ningún error.
+
+    sudo systemctl restart nginx
+
+Debemos comentar la última linea del archivo **/etc/nginx/nginx.conf** para que funcione como balanceador.
 
 
