@@ -54,3 +54,32 @@ Para comprobar que todo funciona correctamente basta con hacer peticiones a la I
 Para que nos salga una cosa diferente cuando accede a una maquina servidora u otra podemos tener un index.html diferente en cada una que ponga *Servidor 1/2* respectivamente.
 
 ![imagen](https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/comprobacion.png)
+
+## Instalar haproxy
+
+Tras instalar el sistema básico y configurar la red **(IP 192.168.56.104)**, sólo tenemos que usar apt-get para instalar haproxy:
+
+    sudo apt-get install haproxy
+    
+Ahora vamos a pasar a su configuración modificando/creando el archivo **/etc/haproxy/haproxy.conf**. Al contenido del archivo se le añadirá lo siguiente:
+
+    global
+        daemon
+        maxconn 256
+        
+    defaults
+        mode http 
+        contimeout 4000
+        clitimeout 42000
+        srvtimeout 43000
+
+    frontend http-in
+        bind *:80
+        default_backend servers
+        
+    backend servers
+        server m1 192.168.56.101:80 maxconn 32
+        server m1 192.168.56.102:80 maxconn 32
+
+
+    
