@@ -53,4 +53,4 @@ Para comprobar que todo funciona correctamente basta con hacer peticiones a la I
     
 Para que nos salga una cosa diferente cuando accede a una maquina servidora u otra podemos tener un index.html diferente en cada una que ponga *Servidor 1/2* respectivamente.
 
-!imagen(https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/comprobacion.png)
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/comprobacion.png)
