@@ -81,5 +81,13 @@ Ahora vamos a pasar a su configuración modificando/creando el archivo **/etc/ha
         server m1 192.168.56.101:80 maxconn 32
         server m1 192.168.56.102:80 maxconn 32
 
+Una vez salvada la configuración en el fichero, lanzamos el servicio haproxy mediante el comando:
+
+    sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
+    
+Si no nos sale ningún error o aviso, todo ha ido bien, y ya podemos comenzar a hacer peticiones a la IP del balanceador (como hicimos en el caso del nginx con cURL).
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/comprobacion.png)
+
 
     
