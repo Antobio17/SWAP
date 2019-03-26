@@ -47,5 +47,10 @@ Ahora reiniciamos el servidor y si lo hemos configurado correctamente no deberí
     sudo systemctl restart nginx
 
 Debemos comentar la última linea del archivo **/etc/nginx/nginx.conf** para que funcione como balanceador.
+Para comprobar que todo funciona correctamente basta con hacer peticiones a la IP del balanceador desde la terminal de nuestra maquina principal por ejemplo:
+
+    curl http://192.168.56.103
+    
+Para que nos salga una cosa diferente cuando accede a una maquina servidora u otra podemos tener un index.html diferente en cada una que ponga *Servidor 1/2* respectivamente.
 
 
