@@ -101,3 +101,10 @@ Para realizar una comparación más justa he eliminado los pesos y el keepalive 
 
     ab -n 50000 -c 50 http://192.168.56.103/index.html
     
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/ServerNginx.png)
+
+### Servidor Haproxy
+
+    ab -n 50000 -c 50 http://192.168.56.104/index.html
+    
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/ServerHaproxy.png)
