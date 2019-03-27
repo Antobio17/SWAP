@@ -108,3 +108,5 @@ Para realizar una comparación más justa he eliminado los pesos y el keepalive 
     ab -n 50000 -c 50 http://192.168.56.104/index.html
     
 ![imagen](https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/ServerHaproxy.png)
+
+Como podemos observar, el servidor de balanceo con haproxy sirve en una media de 16 segundos, mucho menor que los 26 de nginX. Con estos datos podemos afirmar que el software de balanceo haproxy es el que mejor funciona de los dos.
