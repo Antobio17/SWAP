@@ -89,5 +89,15 @@ Si no nos sale ningún error o aviso, todo ha ido bien, y ya podemos comenzar a 
 
 ![imagen](https://github.com/Antobio17/swap1819/blob/master/practica3/imagenes/comprobacion.png)
 
+## Someter a una alta carga el servidor balanceado
 
+Por último vamos a someter a una gran carga nuestra graja web. Para ello esaremos el comando:
+
+    ab -n 50000 -c 50 http://192.168.56.10*/index.html //n = numero de peticiones; c = concurrecia
+    
+Para realizar una comparación más justa he eliminado los pesos y el keepalive en el archivo de configuración de nginx. Los resultados son los siguientes:
+
+### Servidor con nginX
+
+    ab -n 50000 -c 50 http://192.168.56.103/index.html
     
