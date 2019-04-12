@@ -38,3 +38,14 @@ Como podemos comprobar antes de realizar estos ajuste no funciona la petición y
 Por último, y como queremos que la granja nos permita usar el HTTPS, debemos configurar el balanceador para que también acepte este tráfico (puerto 443). Para ello vamos a clonar los certificados generados en el primera Maquina con la orden rsync tal que asi (creando previamente la carpeta de destino, en este caso /etc/crt/):
 
         sudo rsync -avz -e ssh 192.168.56.101:/etc/apache2/ssl/ /etc/crt/
+        
+Por ultimo tenemos que añadir estas lineas en la máquina balanceadora de nginX al archivo */etc/nginx/conf.d/default.conf* y reiniciarlo:
+
+        listen 443 ssl;
+        ssl on;
+        ssl_certificate /tmp/apache.crt;
+        ssl_certificate_key /tmp/apache.key;
+        
+### 2: Configuración del cortafuegos
+
+
