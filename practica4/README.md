@@ -25,3 +25,9 @@ Activamos el sitio default-ssl y reiniciamos el apache:
 
     a2ensite default-ssl
     service apache2 reload
+
+Para comprobar que funciona podemos realizarle una peticin al servidor con la siguiente orden desde nuestra maquina:
+
+    curl -k https://192.168.56.101/index.html
+    
+Ahora repetimos estas mismas operaciones para la Maquina2.
