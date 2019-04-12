@@ -31,3 +31,8 @@ Para comprobar que funciona podemos realizarle una peticin al servidor con la si
     curl -k https://192.168.56.101/index.html
     
 Ahora repetimos estas mismas operaciones para la Maquina2.
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica4/imagenes/pruebaHttps.png)
+
+Como podemos comprobar antes de realizar estos ajuste no funciona la petición y una vez hecho si nos devuelve el index.html de nuestro servidor.
+Por último, y como queremos que la granja nos permita usar el HTTPS, debemos configurar el balanceador para que también acepte este tráfico (puerto 443).
