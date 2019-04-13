@@ -45,7 +45,11 @@ Por ultimo tenemos que añadir estas lineas en la máquina balanceadora de nginX
         ssl on;
         ssl_certificate /tmp/apache.crt;
         ssl_certificate_key /tmp/apache.key;
-        
-### 2: Configuración del cortafuegos
 
+
+### 2: Configuración del cortafuegos
+Vamos a configurar nuestro cortafuegos con la ayuda de un scrip el cual haremos que se active cuando el sistema arranque.
+El script será el siguiente y lo guardaremos en la carpeta /bin (/bin/swap).
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica4/imagenes/script.png)
 
