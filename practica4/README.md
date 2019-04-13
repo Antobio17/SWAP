@@ -53,3 +53,12 @@ El script será el siguiente y lo guardaremos en la carpeta /bin (/bin/swap).
 
 ![imagen](https://github.com/Antobio17/swap1819/blob/master/practica4/imagenes/script.png)
 
+Lo que realiza este script es lo siguiente: Elimina todas las reglas del cortafuegos y denega el tráfico, por lo que no podríamos acceder al servidor por ningún puerto. Posteriormente permite el acceso desde el localhost eliminando al administrador/usuario del servidor de restricciones generadas anteriormente. Por último permitiremos el acceso por los puertos 22 (ssh), 80 (http) y 443 (https).
+
+Ahora para que el script se ejecute al inicio vamos a crear el archivo swap.conf en */etc/init* con las siguientes lineas:
+
+    start on startup
+    task
+    exec /bin/swap
+    
+ 
