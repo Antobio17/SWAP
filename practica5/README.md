@@ -60,6 +60,6 @@ Guardamos el arhcivo de configuración y reiniciamos el servicio usando la sigui
 Si todo va bien, el mensaje mostrado al ejecutar lo anterior será un 'ok'. De otra forma, será un error:
 Ahora accedemos a la máquina maestro y creamos un usuario:
 
-![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db6.png)
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db7.png)
 
 
