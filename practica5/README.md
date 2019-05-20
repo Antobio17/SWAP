@@ -62,4 +62,24 @@ Ahora accedemos a la máquina maestro y creamos un usuario:
 
 ![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db7.png)
 
+Una vez terminada la creación del usuario y conocidos el nombre de archivo y posición proporcionados por la orden show master status podemos ir al servidor esclavo, acceder a mysql e introducir la siguiente orden:
+
+        mysql> CHANGE MASTER TO MASTER_HOST='192.168.56.11', MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', MASTER_LOG_FILE='mysql-bin.000008', MASTER_LOG_POS=980, MASTER_PORT=3306;
+
+A continuación, iniciamos el esclavo usando:
+
+    mysql> START SLAVE;
+
+En este punto, ya podremos copiar automáticamente las tablas que haya en el maestro. Pero para poder modificar las tablas del mismo hemos de desbloquearlas usando, dentro de mysql en el maestro:
+
+    mysql> UNLOCK TABLES;
+
+Ahora, simplemente hemos de comprobar el correcto funcionamiento de la replicación usando la siguiente orden:
+
+    mysql> SHOW SLAVE STATUS\G;
+
+Si el atributo Seconds_Behind_Master es distinto a NULL, podremos asegurar que el sistema no tiene errores. A continuación se muestra una captura del resultado de la orden anterior, se visualiza lo siguiente:
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db8.png)
+
 
