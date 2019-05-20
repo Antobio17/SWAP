@@ -38,3 +38,28 @@ Comprobamos que la copia ha sido satisfactoria mostrando la información de la t
 
 ![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db5.png)
 
+## Replicar una BD mediante una configuración maestro esclavo
+
+
+Como el anterior procedimiento debe realizarse de manera manual mostraremos otra herramienta que permite realizar esta tarea automáticamente. El siguiente proceso debe realizarse tanto para la máquina que hará de maestro y la que hará de esclavo. Para hacerlo simplemente debemos acceder al archivo de configuración /etc/mysql/mysql.conf.d/mysqld.cnf y comentamos la siguiente línea:
+
+    #bind-address 127.0.0.1
+
+También debemos indicar el archivo del log de errores así como el registro binario que contiene la información disponible en el registro de actualizaciones:
+
+    log_error = /var/log/mysql/error.log log_bin = /var/log/mysql/bin.log
+
+Por último, indicamos el identificador del servidor (1 para la máquina maestro y 2 para la máquina esclavo):
+
+    server-id = 1
+
+Guardamos el arhcivo de configuración y reiniciamos el servicio usando la siguiente orden:
+
+    $ /etc/init.d/mysql restart
+
+Si todo va bien, el mensaje mostrado al ejecutar lo anterior será un 'ok'. De otra forma, será un error:
+Ahora accedemos a la máquina maestro y creamos un usuario:
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db6.png)
+
+
