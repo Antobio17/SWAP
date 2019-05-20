@@ -23,3 +23,18 @@ Para desbloquear las tablas que antes habíamos bloqueado, usamos en mysql el si
 Hacemos la copia, desde nuestro esclavo hemos de usar el siguiente comando para copiar los datos guardados:
 
     scp 192.168.56.101:/tmp/contactos.sql /tmp/
+    
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db4.png)
+
+Habiendo terminado este proceso, restauramos los datos en la BD del esclavo. Primero hemos de crear la base de datos entrando en mysql:
+
+    CREATE DATABASE contactos;
+
+Y por último, restauramos los datos usando el comando:
+
+    mysql -u root -p contactos < /tmp/contactos.sql
+
+Comprobamos que la copia ha sido satisfactoria mostrando la información de la tabla:
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db5.png)
+
