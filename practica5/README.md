@@ -64,8 +64,9 @@ Ahora accedemos a la máquina maestro y creamos un usuario:
 
 Una vez terminada la creación del usuario y conocidos el nombre de archivo y posición proporcionados por la orden show master status podemos ir al servidor esclavo, acceder a mysql e introducir la siguiente orden:
 
-        mysql> CHANGE MASTER TO MASTER_HOST='192.168.56.101', MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', MASTER_LOG_FILE='mysql-bin.000008', MASTER_LOG_POS=980, MASTER_PORT=3306;
+        mysql> CHANGE MASTER TO MASTER_HOST='192.168.56.101', MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', MASTER_LOG_FILE='mysql-bin.000003, MASTER_LOG_POS=154ASTER_PORT=3306;
 
+Debemos tener en cuenta que los valores de *MASTER_LOG_FILE* y *MASTER_LOG_POS* cambian al reiniciar la maquina.
 A continuación, iniciamos el esclavo usando:
 
     mysql> START SLAVE;
