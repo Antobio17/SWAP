@@ -83,4 +83,7 @@ Si el atributo Seconds_Behind_Master es distinto a NULL, podremos asegurar que e
 
 ![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db8.png)
 
+Por último, comprobamos que el sistema funciona introduciendo datos en el servidor maestro y visualizando como estos se replican en el esclavo:
+
+![imagen](https://github.com/Antobio17/swap1819/blob/master/practica5/imagenes/db9.png)
 
